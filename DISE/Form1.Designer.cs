@@ -61,11 +61,11 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.empresaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.panelEmpleado = new System.Windows.Forms.Panel();
+            this.CodEmpresa = new System.Windows.Forms.ComboBox();
             this.btcancel2 = new System.Windows.Forms.Button();
             this.btaddEmpleado = new System.Windows.Forms.Button();
-            this.codEmpresaTextBox = new System.Windows.Forms.TextBox();
-            this.empleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.legajoTextBox = new System.Windows.Forms.TextBox();
+            this.empleadosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cUILTextBox = new System.Windows.Forms.TextBox();
             this.nombreCompletoTextBox = new System.Windows.Forms.TextBox();
             this.empleadosTableAdapter = new DISE.ContableDataSetTableAdapters.EmpleadosTableAdapter();
@@ -74,6 +74,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picCerrar = new System.Windows.Forms.PictureBox();
             this.panelIzq = new System.Windows.Forms.Panel();
+            this.panelDet2 = new System.Windows.Forms.Panel();
             this.subPanel2 = new System.Windows.Forms.Panel();
             this.panelDet = new System.Windows.Forms.Panel();
             this.panelDet1 = new System.Windows.Forms.Panel();
@@ -100,7 +101,6 @@
             this.cantHijos = new System.Windows.Forms.ComboBox();
             this.deduciblesTableAdapter = new DISE.ContableDataSetTableAdapters.DeduciblesTableAdapter();
             this.panelCentral = new System.Windows.Forms.Panel();
-            this.panelDet2 = new System.Windows.Forms.Panel();
             nombreLabel = new System.Windows.Forms.Label();
             cUITLabel = new System.Windows.Forms.Label();
             nombreCompletoLabel = new System.Windows.Forms.Label();
@@ -147,54 +147,60 @@
             // nombreCompletoLabel
             // 
             nombreCompletoLabel.AutoSize = true;
-            nombreCompletoLabel.Location = new System.Drawing.Point(15, 35);
+            nombreCompletoLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            nombreCompletoLabel.Location = new System.Drawing.Point(3, 33);
             nombreCompletoLabel.Name = "nombreCompletoLabel";
-            nombreCompletoLabel.Size = new System.Drawing.Size(94, 13);
+            nombreCompletoLabel.Size = new System.Drawing.Size(122, 17);
             nombreCompletoLabel.TabIndex = 0;
             nombreCompletoLabel.Text = "Nombre Completo:";
             // 
             // cUILLabel
             // 
             cUILLabel.AutoSize = true;
-            cUILLabel.Location = new System.Drawing.Point(75, 61);
+            cUILLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            cUILLabel.Location = new System.Drawing.Point(86, 60);
             cUILLabel.Name = "cUILLabel";
-            cUILLabel.Size = new System.Drawing.Size(34, 13);
+            cUILLabel.Size = new System.Drawing.Size(37, 17);
             cUILLabel.TabIndex = 2;
             cUILLabel.Text = "CUIL:";
             // 
             // legajoLabel
             // 
             legajoLabel.AutoSize = true;
-            legajoLabel.Location = new System.Drawing.Point(67, 87);
+            legajoLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legajoLabel.Location = new System.Drawing.Point(71, 85);
             legajoLabel.Name = "legajoLabel";
-            legajoLabel.Size = new System.Drawing.Size(42, 13);
+            legajoLabel.Size = new System.Drawing.Size(52, 17);
             legajoLabel.TabIndex = 4;
             legajoLabel.Text = "Legajo:";
             // 
             // codEmpresaLabel
             // 
             codEmpresaLabel.AutoSize = true;
-            codEmpresaLabel.Location = new System.Drawing.Point(36, 113);
+            codEmpresaLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            codEmpresaLabel.Location = new System.Drawing.Point(65, 122);
             codEmpresaLabel.Name = "codEmpresaLabel";
-            codEmpresaLabel.Size = new System.Drawing.Size(73, 13);
+            codEmpresaLabel.Size = new System.Drawing.Size(58, 17);
             codEmpresaLabel.TabIndex = 6;
-            codEmpresaLabel.Text = "Cod Empresa:";
+            codEmpresaLabel.Text = "Empresa";
             // 
             // fechaNacLabel
             // 
             fechaNacLabel.AutoSize = true;
-            fechaNacLabel.Location = new System.Drawing.Point(37, 51);
+            fechaNacLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            fechaNacLabel.Location = new System.Drawing.Point(47, 49);
             fechaNacLabel.Name = "fechaNacLabel";
-            fechaNacLabel.Size = new System.Drawing.Size(60, 13);
+            fechaNacLabel.Size = new System.Drawing.Size(74, 17);
             fechaNacLabel.TabIndex = 10;
             fechaNacLabel.Text = "fecha Nac:";
             // 
             // fechaMatLabel
             // 
             fechaMatLabel.AutoSize = true;
+            fechaMatLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             fechaMatLabel.Location = new System.Drawing.Point(49, 109);
             fechaMatLabel.Name = "fechaMatLabel";
-            fechaMatLabel.Size = new System.Drawing.Size(58, 13);
+            fechaMatLabel.Size = new System.Drawing.Size(73, 17);
             fechaMatLabel.TabIndex = 11;
             fechaMatLabel.Text = "fecha Mat:";
             // 
@@ -399,10 +405,10 @@
             // 
             // panelEmpleado
             // 
+            this.panelEmpleado.Controls.Add(this.CodEmpresa);
             this.panelEmpleado.Controls.Add(this.btcancel2);
             this.panelEmpleado.Controls.Add(this.btaddEmpleado);
             this.panelEmpleado.Controls.Add(codEmpresaLabel);
-            this.panelEmpleado.Controls.Add(this.codEmpresaTextBox);
             this.panelEmpleado.Controls.Add(legajoLabel);
             this.panelEmpleado.Controls.Add(this.legajoTextBox);
             this.panelEmpleado.Controls.Add(cUILLabel);
@@ -414,6 +420,19 @@
             this.panelEmpleado.Size = new System.Drawing.Size(251, 217);
             this.panelEmpleado.TabIndex = 3;
             this.panelEmpleado.Visible = false;
+            // 
+            // CodEmpresa
+            // 
+            this.CodEmpresa.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.empresaBindingSource, "CodEmpresa", true));
+            this.CodEmpresa.DataSource = this.empresaBindingSource;
+            this.CodEmpresa.DisplayMember = "nombre";
+            this.CodEmpresa.FormattingEnabled = true;
+            this.CodEmpresa.Location = new System.Drawing.Point(129, 116);
+            this.CodEmpresa.Name = "CodEmpresa";
+            this.CodEmpresa.Size = new System.Drawing.Size(100, 21);
+            this.CodEmpresa.TabIndex = 10;
+            this.CodEmpresa.ValueMember = "CodEmpresa";
+            this.CodEmpresa.SelectedIndexChanged += new System.EventHandler(this.CodEmpresa_SelectedIndexChanged);
             // 
             // btcancel2
             // 
@@ -434,31 +453,23 @@
             this.btaddEmpleado.UseVisualStyleBackColor = true;
             this.btaddEmpleado.Click += new System.EventHandler(this.btaddEmpleado_Click);
             // 
-            // codEmpresaTextBox
+            // legajoTextBox
             // 
-            this.codEmpresaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadosBindingSource, "CodEmpresa", true));
-            this.codEmpresaTextBox.Location = new System.Drawing.Point(115, 110);
-            this.codEmpresaTextBox.Name = "codEmpresaTextBox";
-            this.codEmpresaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.codEmpresaTextBox.TabIndex = 7;
+            this.legajoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadosBindingSource, "Legajo", true));
+            this.legajoTextBox.Location = new System.Drawing.Point(129, 85);
+            this.legajoTextBox.Name = "legajoTextBox";
+            this.legajoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.legajoTextBox.TabIndex = 5;
             // 
             // empleadosBindingSource
             // 
             this.empleadosBindingSource.DataMember = "Empleados";
             this.empleadosBindingSource.DataSource = this.contableDataSet;
             // 
-            // legajoTextBox
-            // 
-            this.legajoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadosBindingSource, "Legajo", true));
-            this.legajoTextBox.Location = new System.Drawing.Point(115, 84);
-            this.legajoTextBox.Name = "legajoTextBox";
-            this.legajoTextBox.Size = new System.Drawing.Size(100, 20);
-            this.legajoTextBox.TabIndex = 5;
-            // 
             // cUILTextBox
             // 
             this.cUILTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadosBindingSource, "CUIL", true));
-            this.cUILTextBox.Location = new System.Drawing.Point(115, 58);
+            this.cUILTextBox.Location = new System.Drawing.Point(129, 59);
             this.cUILTextBox.Name = "cUILTextBox";
             this.cUILTextBox.Size = new System.Drawing.Size(100, 20);
             this.cUILTextBox.TabIndex = 3;
@@ -466,7 +477,7 @@
             // nombreCompletoTextBox
             // 
             this.nombreCompletoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadosBindingSource, "NombreCompleto", true));
-            this.nombreCompletoTextBox.Location = new System.Drawing.Point(115, 32);
+            this.nombreCompletoTextBox.Location = new System.Drawing.Point(129, 33);
             this.nombreCompletoTextBox.Name = "nombreCompletoTextBox";
             this.nombreCompletoTextBox.Size = new System.Drawing.Size(100, 20);
             this.nombreCompletoTextBox.TabIndex = 1;
@@ -537,6 +548,14 @@
             this.panelIzq.Name = "panelIzq";
             this.panelIzq.Size = new System.Drawing.Size(200, 493);
             this.panelIzq.TabIndex = 6;
+            // 
+            // panelDet2
+            // 
+            this.panelDet2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(142)))));
+            this.panelDet2.Location = new System.Drawing.Point(0, 103);
+            this.panelDet2.Name = "panelDet2";
+            this.panelDet2.Size = new System.Drawing.Size(10, 42);
+            this.panelDet2.TabIndex = 1;
             // 
             // subPanel2
             // 
@@ -715,6 +734,7 @@
             this.addDeducibles.TabIndex = 13;
             this.addDeducibles.Text = "&Agregar";
             this.addDeducibles.UseVisualStyleBackColor = true;
+            this.addDeducibles.Click += new System.EventHandler(this.addDeducibles_Click);
             // 
             // fechaMatTextBox
             // 
@@ -742,27 +762,30 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 142);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(-2, 140);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 13);
+            this.label5.Size = new System.Drawing.Size(126, 17);
             this.label5.TabIndex = 10;
             this.label5.Text = "Familiares a cargo : ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 80);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(35, 79);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 13);
+            this.label3.Size = new System.Drawing.Size(86, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Estado Civil : ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.Size = new System.Drawing.Size(118, 17);
             this.label1.TabIndex = 6;
             this.label1.Text = "Cantidad de hijos :";
             // 
@@ -841,14 +864,7 @@
             this.panelCentral.Name = "panelCentral";
             this.panelCentral.Size = new System.Drawing.Size(1043, 527);
             this.panelCentral.TabIndex = 8;
-            // 
-            // panelDet2
-            // 
-            this.panelDet2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(93)))), ((int)(((byte)(142)))));
-            this.panelDet2.Location = new System.Drawing.Point(0, 103);
-            this.panelDet2.Name = "panelDet2";
-            this.panelDet2.Size = new System.Drawing.Size(10, 42);
-            this.panelDet2.TabIndex = 1;
+            this.panelCentral.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCentral_Paint);
             // 
             // Form1
             // 
@@ -918,7 +934,6 @@
         private ContableDataSetTableAdapters.EmpleadosTableAdapter empleadosTableAdapter;
         private System.Windows.Forms.Button btcancel2;
         private System.Windows.Forms.Button btaddEmpleado;
-        private System.Windows.Forms.TextBox codEmpresaTextBox;
         private System.Windows.Forms.TextBox legajoTextBox;
         private System.Windows.Forms.TextBox cUILTextBox;
         private System.Windows.Forms.TextBox nombreCompletoTextBox;
@@ -954,6 +969,7 @@
         private System.Windows.Forms.Panel panelDet1;
         private System.Windows.Forms.Panel subPanel2;
         private System.Windows.Forms.Panel panelDet2;
+        private System.Windows.Forms.ComboBox CodEmpresa;
     }
 }
 
