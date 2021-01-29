@@ -1,6 +1,6 @@
 ﻿namespace DISE
 {
-    partial class Form1
+    partial class Menu1
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -37,7 +37,7 @@
             System.Windows.Forms.Label codEmpresaLabel;
             System.Windows.Forms.Label fechaNacLabel;
             System.Windows.Forms.Label fechaMatLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu1));
             this.panelEmpresa = new System.Windows.Forms.Panel();
             this.btCancel1 = new System.Windows.Forms.Button();
             this.btAddEmpresa = new System.Windows.Forms.Button();
@@ -124,28 +124,32 @@
             this.subPanel1.SuspendLayout();
             this.panelDeduc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deduciblesBindingSource)).BeginInit();
+            this.panelCentral.SuspendLayout();
             this.SuspendLayout();
             // 
             // nombreLabel
             // 
             nombreLabel.AutoSize = true;
-            nombreLabel.Location = new System.Drawing.Point(46, 19);
+            nombreLabel.Location = new System.Drawing.Point(40, 19);
             nombreLabel.Name = "nombreLabel";
-            nombreLabel.Size = new System.Drawing.Size(45, 13);
+            nombreLabel.Size = new System.Drawing.Size(56, 17);
             nombreLabel.TabIndex = 0;
-            nombreLabel.Text = "nombre:";
+            nombreLabel.Text = "Nombre";
             // 
             // cUITLabel
             // 
             cUITLabel.AutoSize = true;
-            cUITLabel.Location = new System.Drawing.Point(56, 58);
+            cUITLabel.Location = new System.Drawing.Point(40, 60);
             cUITLabel.Name = "cUITLabel";
-            cUITLabel.Size = new System.Drawing.Size(35, 13);
+            cUITLabel.Size = new System.Drawing.Size(36, 17);
             cUITLabel.TabIndex = 2;
             cUITLabel.Text = "CUIT:";
             // 
             // nombreCompletoLabel
             // 
+            nombreCompletoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             nombreCompletoLabel.AutoSize = true;
             nombreCompletoLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             nombreCompletoLabel.Location = new System.Drawing.Point(3, 33);
@@ -156,6 +160,9 @@
             // 
             // cUILLabel
             // 
+            cUILLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             cUILLabel.AutoSize = true;
             cUILLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             cUILLabel.Location = new System.Drawing.Point(86, 60);
@@ -166,6 +173,9 @@
             // 
             // legajoLabel
             // 
+            legajoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             legajoLabel.AutoSize = true;
             legajoLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             legajoLabel.Location = new System.Drawing.Point(71, 85);
@@ -176,6 +186,9 @@
             // 
             // codEmpresaLabel
             // 
+            codEmpresaLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             codEmpresaLabel.AutoSize = true;
             codEmpresaLabel.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             codEmpresaLabel.Location = new System.Drawing.Point(65, 122);
@@ -206,13 +219,14 @@
             // 
             // panelEmpresa
             // 
+            this.panelEmpresa.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panelEmpresa.Controls.Add(this.btCancel1);
             this.panelEmpresa.Controls.Add(this.btAddEmpresa);
             this.panelEmpresa.Controls.Add(cUITLabel);
             this.panelEmpresa.Controls.Add(this.cUITTextBox);
             this.panelEmpresa.Controls.Add(nombreLabel);
             this.panelEmpresa.Controls.Add(this.nombreTextBox);
-            this.panelEmpresa.Location = new System.Drawing.Point(249, 59);
+            this.panelEmpresa.Location = new System.Drawing.Point(496, 40);
             this.panelEmpresa.Name = "panelEmpresa";
             this.panelEmpresa.Size = new System.Drawing.Size(251, 139);
             this.panelEmpresa.TabIndex = 0;
@@ -220,7 +234,7 @@
             // 
             // btCancel1
             // 
-            this.btCancel1.Location = new System.Drawing.Point(140, 101);
+            this.btCancel1.Location = new System.Drawing.Point(150, 101);
             this.btCancel1.Name = "btCancel1";
             this.btCancel1.Size = new System.Drawing.Size(75, 23);
             this.btCancel1.TabIndex = 5;
@@ -229,7 +243,7 @@
             // 
             // btAddEmpresa
             // 
-            this.btAddEmpresa.Location = new System.Drawing.Point(59, 101);
+            this.btAddEmpresa.Location = new System.Drawing.Point(43, 101);
             this.btAddEmpresa.Name = "btAddEmpresa";
             this.btAddEmpresa.Size = new System.Drawing.Size(75, 23);
             this.btAddEmpresa.TabIndex = 4;
@@ -240,9 +254,9 @@
             // cUITTextBox
             // 
             this.cUITTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresaBindingSource, "CUIT", true));
-            this.cUITTextBox.Location = new System.Drawing.Point(97, 55);
+            this.cUITTextBox.Location = new System.Drawing.Point(115, 55);
             this.cUITTextBox.Name = "cUITTextBox";
-            this.cUITTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cUITTextBox.Size = new System.Drawing.Size(100, 22);
             this.cUITTextBox.TabIndex = 3;
             // 
             // empresaBindingSource
@@ -258,9 +272,9 @@
             // nombreTextBox
             // 
             this.nombreTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empresaBindingSource, "nombre", true));
-            this.nombreTextBox.Location = new System.Drawing.Point(97, 16);
+            this.nombreTextBox.Location = new System.Drawing.Point(115, 14);
             this.nombreTextBox.Name = "nombreTextBox";
-            this.nombreTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreTextBox.Size = new System.Drawing.Size(100, 22);
             this.nombreTextBox.TabIndex = 1;
             // 
             // empresaTableAdapter
@@ -405,6 +419,7 @@
             // 
             // panelEmpleado
             // 
+            this.panelEmpleado.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panelEmpleado.Controls.Add(this.CodEmpresa);
             this.panelEmpleado.Controls.Add(this.btcancel2);
             this.panelEmpleado.Controls.Add(this.btaddEmpleado);
@@ -415,7 +430,7 @@
             this.panelEmpleado.Controls.Add(this.cUILTextBox);
             this.panelEmpleado.Controls.Add(nombreCompletoLabel);
             this.panelEmpleado.Controls.Add(this.nombreCompletoTextBox);
-            this.panelEmpleado.Location = new System.Drawing.Point(249, 59);
+            this.panelEmpleado.Location = new System.Drawing.Point(249, 191);
             this.panelEmpleado.Name = "panelEmpleado";
             this.panelEmpleado.Size = new System.Drawing.Size(251, 217);
             this.panelEmpleado.TabIndex = 3;
@@ -423,19 +438,26 @@
             // 
             // CodEmpresa
             // 
+            this.CodEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.CodEmpresa.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.empresaBindingSource, "CodEmpresa", true));
             this.CodEmpresa.DataSource = this.empresaBindingSource;
             this.CodEmpresa.DisplayMember = "nombre";
             this.CodEmpresa.FormattingEnabled = true;
             this.CodEmpresa.Location = new System.Drawing.Point(129, 116);
             this.CodEmpresa.Name = "CodEmpresa";
-            this.CodEmpresa.Size = new System.Drawing.Size(100, 21);
+            this.CodEmpresa.Size = new System.Drawing.Size(100, 25);
             this.CodEmpresa.TabIndex = 10;
             this.CodEmpresa.ValueMember = "CodEmpresa";
             this.CodEmpresa.SelectedIndexChanged += new System.EventHandler(this.CodEmpresa_SelectedIndexChanged);
             // 
             // btcancel2
             // 
+            this.btcancel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btcancel2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btcancel2.Location = new System.Drawing.Point(140, 171);
             this.btcancel2.Name = "btcancel2";
             this.btcancel2.Size = new System.Drawing.Size(75, 23);
@@ -445,6 +467,10 @@
             // 
             // btaddEmpleado
             // 
+            this.btaddEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btaddEmpleado.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btaddEmpleado.Location = new System.Drawing.Point(38, 171);
             this.btaddEmpleado.Name = "btaddEmpleado";
             this.btaddEmpleado.Size = new System.Drawing.Size(75, 23);
@@ -455,10 +481,13 @@
             // 
             // legajoTextBox
             // 
+            this.legajoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.legajoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadosBindingSource, "Legajo", true));
             this.legajoTextBox.Location = new System.Drawing.Point(129, 85);
             this.legajoTextBox.Name = "legajoTextBox";
-            this.legajoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.legajoTextBox.Size = new System.Drawing.Size(100, 22);
             this.legajoTextBox.TabIndex = 5;
             // 
             // empleadosBindingSource
@@ -468,18 +497,24 @@
             // 
             // cUILTextBox
             // 
+            this.cUILTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cUILTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadosBindingSource, "CUIL", true));
             this.cUILTextBox.Location = new System.Drawing.Point(129, 59);
             this.cUILTextBox.Name = "cUILTextBox";
-            this.cUILTextBox.Size = new System.Drawing.Size(100, 20);
+            this.cUILTextBox.Size = new System.Drawing.Size(100, 22);
             this.cUILTextBox.TabIndex = 3;
             // 
             // nombreCompletoTextBox
             // 
+            this.nombreCompletoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.nombreCompletoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.empleadosBindingSource, "NombreCompleto", true));
             this.nombreCompletoTextBox.Location = new System.Drawing.Point(129, 33);
             this.nombreCompletoTextBox.Name = "nombreCompletoTextBox";
-            this.nombreCompletoTextBox.Size = new System.Drawing.Size(100, 20);
+            this.nombreCompletoTextBox.Size = new System.Drawing.Size(100, 22);
             this.nombreCompletoTextBox.TabIndex = 1;
             // 
             // empleadosTableAdapter
@@ -495,14 +530,14 @@
             this.panelSup.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSup.Location = new System.Drawing.Point(0, 0);
             this.panelSup.Name = "panelSup";
-            this.panelSup.Size = new System.Drawing.Size(1043, 34);
+            this.panelSup.Size = new System.Drawing.Size(1043, 31);
             this.panelSup.TabIndex = 5;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(950, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(946, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(26, 22);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -513,7 +548,7 @@
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(982, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(978, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(26, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -524,7 +559,7 @@
             // 
             this.picCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picCerrar.Image = ((System.Drawing.Image)(resources.GetObject("picCerrar.Image")));
-            this.picCerrar.Location = new System.Drawing.Point(1014, 12);
+            this.picCerrar.Location = new System.Drawing.Point(1010, 3);
             this.picCerrar.Name = "picCerrar";
             this.picCerrar.Size = new System.Drawing.Size(26, 22);
             this.picCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -544,9 +579,9 @@
             this.panelIzq.Controls.Add(this.btEmpresa);
             this.panelIzq.Controls.Add(this.panelLogo);
             this.panelIzq.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelIzq.Location = new System.Drawing.Point(0, 34);
+            this.panelIzq.Location = new System.Drawing.Point(0, 31);
             this.panelIzq.Name = "panelIzq";
-            this.panelIzq.Size = new System.Drawing.Size(200, 493);
+            this.panelIzq.Size = new System.Drawing.Size(200, 496);
             this.panelIzq.TabIndex = 6;
             // 
             // panelDet2
@@ -597,6 +632,7 @@
             this.btAdministrar.TabIndex = 6;
             this.btAdministrar.Text = "&Administrar";
             this.btAdministrar.UseVisualStyleBackColor = true;
+            this.btAdministrar.Click += new System.EventHandler(this.btAdministrar_Click);
             // 
             // subPanel1
             // 
@@ -697,6 +733,7 @@
             // 
             // panelDeduc
             // 
+            this.panelDeduc.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.panelDeduc.Controls.Add(this.deducCancel);
             this.panelDeduc.Controls.Add(this.addDeducibles);
             this.panelDeduc.Controls.Add(fechaMatLabel);
@@ -710,16 +747,17 @@
             this.panelDeduc.Controls.Add(this.acargo);
             this.panelDeduc.Controls.Add(this.estCivil);
             this.panelDeduc.Controls.Add(this.cantHijos);
-            this.panelDeduc.Location = new System.Drawing.Point(514, 60);
+            this.panelDeduc.Location = new System.Drawing.Point(518, 191);
             this.panelDeduc.Name = "panelDeduc";
-            this.panelDeduc.Size = new System.Drawing.Size(517, 216);
+            this.panelDeduc.Size = new System.Drawing.Size(525, 216);
             this.panelDeduc.TabIndex = 7;
             this.panelDeduc.Visible = false;
             this.panelDeduc.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDeduc_Paint);
             // 
             // deducCancel
             // 
-            this.deducCancel.Location = new System.Drawing.Point(217, 180);
+            this.deducCancel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deducCancel.Location = new System.Drawing.Point(225, 180);
             this.deducCancel.Name = "deducCancel";
             this.deducCancel.Size = new System.Drawing.Size(75, 23);
             this.deducCancel.TabIndex = 14;
@@ -728,7 +766,8 @@
             // 
             // addDeducibles
             // 
-            this.addDeducibles.Location = new System.Drawing.Point(127, 180);
+            this.addDeducibles.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addDeducibles.Location = new System.Drawing.Point(135, 180);
             this.addDeducibles.Name = "addDeducibles";
             this.addDeducibles.Size = new System.Drawing.Size(75, 23);
             this.addDeducibles.TabIndex = 13;
@@ -739,9 +778,9 @@
             // fechaMatTextBox
             // 
             this.fechaMatTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.deduciblesBindingSource, "fechaMat", true));
-            this.fechaMatTextBox.Location = new System.Drawing.Point(127, 106);
+            this.fechaMatTextBox.Location = new System.Drawing.Point(135, 111);
             this.fechaMatTextBox.Name = "fechaMatTextBox";
-            this.fechaMatTextBox.Size = new System.Drawing.Size(165, 20);
+            this.fechaMatTextBox.Size = new System.Drawing.Size(165, 22);
             this.fechaMatTextBox.TabIndex = 12;
             this.fechaMatTextBox.TextChanged += new System.EventHandler(this.fechaMatTextBox_TextChanged);
             // 
@@ -753,9 +792,9 @@
             // fechaNacTextBox
             // 
             this.fechaNacTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.deduciblesBindingSource, "fechaNac", true));
-            this.fechaNacTextBox.Location = new System.Drawing.Point(127, 48);
+            this.fechaNacTextBox.Location = new System.Drawing.Point(135, 47);
             this.fechaNacTextBox.Name = "fechaNacTextBox";
-            this.fechaNacTextBox.Size = new System.Drawing.Size(165, 20);
+            this.fechaNacTextBox.Size = new System.Drawing.Size(165, 22);
             this.fechaNacTextBox.TabIndex = 11;
             this.fechaNacTextBox.TextChanged += new System.EventHandler(this.fechaNacTextBox_TextChanged);
             // 
@@ -763,7 +802,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(-2, 140);
+            this.label5.Location = new System.Drawing.Point(3, 142);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(126, 17);
             this.label5.TabIndex = 10;
@@ -812,9 +851,9 @@
             "8",
             "9",
             "10"});
-            this.acargo.Location = new System.Drawing.Point(127, 139);
+            this.acargo.Location = new System.Drawing.Point(135, 139);
             this.acargo.Name = "acargo";
-            this.acargo.Size = new System.Drawing.Size(165, 21);
+            this.acargo.Size = new System.Drawing.Size(165, 25);
             this.acargo.TabIndex = 4;
             // 
             // estCivil
@@ -825,9 +864,9 @@
             "Casado/a",
             "Viudo/a",
             "Divorciado/a"});
-            this.estCivil.Location = new System.Drawing.Point(127, 77);
+            this.estCivil.Location = new System.Drawing.Point(135, 77);
             this.estCivil.Name = "estCivil";
-            this.estCivil.Size = new System.Drawing.Size(165, 21);
+            this.estCivil.Size = new System.Drawing.Size(165, 25);
             this.estCivil.TabIndex = 2;
             this.estCivil.SelectedIndexChanged += new System.EventHandler(this.estCivil_SelectedIndexChanged);
             // 
@@ -846,9 +885,9 @@
             "8",
             "9",
             "10"});
-            this.cantHijos.Location = new System.Drawing.Point(127, 16);
+            this.cantHijos.Location = new System.Drawing.Point(135, 16);
             this.cantHijos.Name = "cantHijos";
-            this.cantHijos.Size = new System.Drawing.Size(165, 21);
+            this.cantHijos.Size = new System.Drawing.Size(165, 25);
             this.cantHijos.TabIndex = 0;
             // 
             // deduciblesTableAdapter
@@ -858,6 +897,9 @@
             // panelCentral
             // 
             this.panelCentral.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelCentral.Controls.Add(this.panelDeduc);
+            this.panelCentral.Controls.Add(this.panelEmpleado);
+            this.panelCentral.Controls.Add(this.panelEmpresa);
             this.panelCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCentral.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelCentral.Location = new System.Drawing.Point(0, 0);
@@ -866,20 +908,17 @@
             this.panelCentral.TabIndex = 8;
             this.panelCentral.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCentral_Paint);
             // 
-            // Form1
+            // Menu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1043, 527);
-            this.Controls.Add(this.panelDeduc);
             this.Controls.Add(this.panelIzq);
             this.Controls.Add(this.panelSup);
-            this.Controls.Add(this.panelEmpleado);
-            this.Controls.Add(this.panelEmpresa);
             this.Controls.Add(this.panelCentral);
             this.Controls.Add(this.empresaBindingNavigator);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Menu1";
+            this.Text = "D.I.S.E";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelEmpresa.ResumeLayout(false);
             this.panelEmpresa.PerformLayout();
@@ -900,6 +939,7 @@
             this.panelDeduc.ResumeLayout(false);
             this.panelDeduc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deduciblesBindingSource)).EndInit();
+            this.panelCentral.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

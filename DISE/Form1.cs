@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace DISE
 {
-    public partial class Form1 : Form
+    public partial class Menu1 : Form
     {
         TextBox[] control1 = new TextBox[2];
         TextBox[] control2 = new TextBox[3];
         TextBox[] control3 = new TextBox[2];
         int click, fecha, contador,combo;
         bool empresa,empleado;
-        public Form1()
+        public Menu1()
         {
             InitializeComponent();
         }
@@ -115,6 +115,7 @@ namespace DISE
             {
                 subPanel1.Visible = false;
                 panelDet1.Visible = false;
+                panelDet2.Visible = true;
                 click = 0;
             }
         }
@@ -168,7 +169,11 @@ namespace DISE
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("¿ Seguro que deseas salir ? ", "Saliendo", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == System.Windows.Forms.DialogResult.Yes)
+            {
+                this.Close();
 
+            }
         }
 
         private void panelCentral_Paint(object sender, PaintEventArgs e)
@@ -180,6 +185,12 @@ namespace DISE
         {
 
         }
+
+        private void btAdministrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void CodEmpresa_SelectedIndexChanged(object sender, EventArgs e)
         {
             combo = 1;
